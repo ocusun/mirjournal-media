@@ -1,0 +1,50 @@
+{
+  "site": {
+    "title": "MirJournal Media",
+    "subtitle": "AI가 분석하는 뉴스, 1분 안에",
+    "description": "미르저널의 모든 영상 콘텐츠. 깊이 있는 분석을 짧은 시간에.",
+    "main_site": "https://mirjournal.com"
+  },
+  "categories": [
+    { "id": "all",       "label": "전체",   "color": "#FFFFFF" },
+    { "id": "economy",   "label": "경제",   "color": "#E63946" },
+    { "id": "realestate","label": "부동산", "color": "#4ECDC4" },
+    { "id": "ai",        "label": "AI",     "color": "#A78BFA" },
+    { "id": "world",     "label": "국제",   "color": "#FFB627" },
+    { "id": "trend",     "label": "트렌드", "color": "#90BE6D" }
+  ],
+  "videos": [
+    {
+      "id": "kospi-167cho",
+      "title": "코스피 167조 줄다리기",
+      "subtitle": "사상 최고치인데 누군가는 167조를 떨어진다에 베팅했다",
+      "category": "economy",
+      "date": "2026-05-12",
+      "duration": "0:45",
+      "thumbnail": "assets/thumb-kospi-167cho.svg",
+      "youtube_url": "https://www.youtube.com/shorts/REPLACE_WITH_VIDEO_ID",
+      "youtube_embed_id": "REPLACE_WITH_VIDEO_ID",
+      "instagram_url": "https://www.instagram.com/reel/REPLACE_WITH_REEL_ID/",
+      "naver_clip_url": "",
+      "article_url": "https://mirjournal.com/%ec%bd%94%ec%8a%a4%ed%94%bc-6475-%ed%95%9c%ec%aa%bd%ec%97%90%ec%84%a0-167%ec%a1%b0-%ec%9b%90-%ed%95%98%eb%9d%bd-%eb%b2%a0%ed%8c%85/",
+      "article_title": "코스피 6,475 — 한쪽은 167조 하락 베팅",
+      "summary": "SK하이닉스가 TSMC를 영업이익률에서 14%p 추월. 같은 시간 공매도 대기 자금은 167조 원으로 사상 최대. 이 줄다리기에서 살아남는 4가지 원칙."
+    },
+    {
+      "id": "sample-template",
+      "title": "[샘플] 새 영상 제목이 여기에",
+      "subtitle": "이 카드는 템플릿입니다. videos.json에 객체를 하나 더 추가하면 새 카드가 생깁니다.",
+      "category": "ai",
+      "date": "2026-05-15",
+      "duration": "0:50",
+      "thumbnail": "assets/thumb-placeholder.svg",
+      "youtube_url": "",
+      "youtube_embed_id": "",
+      "instagram_url": "",
+      "naver_clip_url": "",
+      "article_url": "https://mirjournal.com/",
+      "article_title": "원본 기사 제목",
+      "summary": "영상 요약을 2~3문장으로. 카드와 모달 양쪽에 표시됩니다."
+    }
+  ]
+}

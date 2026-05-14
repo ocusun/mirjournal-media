@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" preserveAspectRatio="xMidYMid slice">
+  <rect width="540" height="960" fill="#131313"/>
+  <rect x="0" y="0" width="540" height="960" fill="url(#noise)" opacity="0.3"/>
+  <defs>
+    <pattern id="noise" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#131313"/>
+      <circle cx="1" cy="1" r="0.5" fill="#1a1a1a"/>
+    </pattern>
+  </defs>
+
+  <text x="270" y="450" text-anchor="middle"
+        font-family="EB Garamond, serif" font-style="italic"
+        font-size="80" font-weight="500" fill="#6b6b68">M / i</text>
+  <text x="270" y="510" text-anchor="middle"
+        font-family="JetBrains Mono, monospace" font-size="14"
+        fill="#6b6b68" letter-spacing="6">COMING SOON</text>
+</svg>

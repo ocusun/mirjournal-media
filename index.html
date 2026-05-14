@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="미르저널의 모든 영상 콘텐츠. AI가 분석하는 깊이 있는 뉴스를 1분 안에.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta property="og:title" content="MirJournal Media — AI가 분석하는 뉴스, 1분 안에">
+  <meta property="og:description" content="미르저널의 모든 영상 콘텐츠를 한곳에서.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mirjournal.com/media/">
+  <meta property="og:locale" content="ko_KR">
+
+  <title>MirJournal Media — 미르저널 미디어</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <!-- Pretendard (Korean body) -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+
+  <!-- EB Garamond (display serif, English) + JetBrains Mono + Noto Serif KR -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+KR:wght@500&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="mast">
+    <div class="container">
+      <div class="mast__rule">
+        <span>MirJournal · Visual Edition</span>
+        <span id="mast-date"></span>
+      </div>
+      <h1 class="mast__title">MirJournal Media</h1>
+      <p class="mast__subtitle">AI가 분석하는 뉴스, 1분 안에.</p>
+      <nav class="mast__meta">
+        <a href="https://mirjournal.com/" target="_blank" rel="noopener">↗ mirjournal.com</a>
+        <a href="https://mirjournal.com/about-us/" target="_blank" rel="noopener">About</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav aria-label="카테고리 필터">
+    <div class="container">
+      <div class="filters" role="tablist"></div>
+    </div>
+  </nav>
+
+  <section class="featured" aria-label="이번 주 영상">
+    <div class="container">
+      <div class="featured__label">— THIS WEEK</div>
+      <div class="featured__grid"></div>
+    </div>
+  </section>
+
+  <section class="gallery" aria-label="전체 영상">
+    <div class="container">
+      <div class="gallery__label">— ALL EPISODES</div>
+      <div class="gallery__grid"></div>
+      <div class="gallery__empty" style="display:none;">
+        해당 카테고리에 영상이 아직 없습니다.
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="container">
+      © MirJournal · The Narrative of a New Mind
+      &nbsp;·&nbsp;
+      <a href="https://mirjournal.com/about-us/" target="_blank" rel="noopener">ABOUT</a>
+      &nbsp;·&nbsp;
+      <a href="https://mirjournal.com/" target="_blank" rel="noopener">MAIN SITE</a>
+    </div>
+  </footer>
+
+  <div class="modal" role="dialog" aria-modal="true" aria-label="영상 재생">
+    <div class="modal__panel"></div>
+  </div>
+
+  <script>
+    // Masthead date stamp (e.g. "12 MAY 2026")
+    (() => {
+      const t = new Date();
+      const d = String(t.getDate()).padStart(2, '0');
+      const m = t.toLocaleString('en-US', { month: 'short' }).toUpperCase();
+      const y = t.getFullYear();
+      document.getElementById('mast-date').textContent = `${d} ${m} ${y}`;
+    })();
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
