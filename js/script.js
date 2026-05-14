@@ -72,12 +72,22 @@ function renderFilters() {
     btn.addEventListener('click', () => {
       activeFilter = btn.dataset.filter;
       renderFilters();
+      renderFeatured();
       renderGallery();
     });
   });
 }
 
 function renderFeatured() {
+  const section = $('.featured');
+
+  // Hide featured area when a specific category filter is active
+  if (activeFilter !== 'all') {
+    section.style.display = 'none';
+    return;
+  }
+  section.style.display = '';
+
   // Use the most recent published video that has a real embed id
   const playable = siteData.videos
     .filter(v => isReady(v.youtube_embed_id))
@@ -119,11 +129,20 @@ function renderFeatured() {
 function renderGallery() {
   const root = $('.gallery__grid');
   const empty = $('.gallery__empty');
+  const label = $('.gallery__label');
 
   const filtered = siteData.videos.filter(v => {
     if (activeFilter === 'all') return true;
     return v.category === activeFilter;
   });
+
+  // Update label to reflect active filter
+  if (activeFilter === 'all') {
+    label.textContent = `— ALL EPISODES · ${siteData.videos.length}편`;
+  } else {
+    const cat = getCategory(activeFilter);
+    label.textContent = `— ${cat.label.toUpperCase()} · ${filtered.length}편`;
+  }
 
   if (filtered.length === 0) {
     root.innerHTML = '';
